@@ -12,6 +12,12 @@ router.get("/getUsers", async (req, res) => {
         menu_name: 메뉴.menu_name,
         menu_img: 메뉴.menu_img,
         menu_price: 메뉴.menu_price,
+        main: 메뉴.main,
+        side: 메뉴.side,
+        drink: 메뉴.drink,
+        alcohol: 메뉴.alcohol,
+        special: 메뉴.special,
+        menu_infu: 메뉴.menu_inf,
       }));
 
       // JSON 형식으로 응답을 클라이언트에게 보냅니다.

@@ -8,9 +8,9 @@ function openModal(imageSrc, menuName, menuPrice, menuDescription) {
     imageSrc +
     '" /><p>' +
     menuName +
-    '</p><p class="menu-price">' +
+    '</p><p class="menu_price">' +
     menuDescription +
-    '</p><p class="menu-price">' +
+    '</p><p class="menu_price">' +
     menuPrice +
     "</p>";
 
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // nameElement.textContent = `${메뉴.menu_img}`;
 
         // 가격 업데이트
-        const priceElement = menuElement.querySelector(".menu-price");
+        const priceElement = menuElement.querySelector(".menu_price");
         priceElement.textContent = `${메뉴.menu_price}원`;
       });
     })

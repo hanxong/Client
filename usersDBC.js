@@ -18,7 +18,25 @@ const getUsers = async () => {
   const promisePool = pool.promise();
 
   // "users" 테이블에서 모든 열을 선택하는 쿼리를 실행함
-  const [rows] = await promisePool.query("select * from 메뉴;");
+  const [rows] = await promisePool.query(`
+  SELECT
+    메뉴.menu_code,
+    메뉴.menu_name,
+    메뉴.menu_price,
+    메뉴.menu_inf,
+    메뉴.idx,
+    카테고리.main,
+    카테고리.side,
+    카테고리.drink,
+    카테고리.alcohol,
+    카테고리.special,
+    카테고리.idx
+FROM
+    메뉴
+INNER JOIN
+    카테고리 ON 메뉴.idx = 카테고리.idx;
+`);
+  //const [rows] = await promisePool.query("select * from 메뉴;");
   // 주문내역、매장、
 
   // 콘솔에 쿼리 결과를 출력

@@ -3,6 +3,7 @@ const express = require("express"); // Express 모듈을 불러옴
 const usersRouter = require("./usersRouter");
 
 const app = express(); // Express 애플리케이션을 생성
+exports.app = app;
 const PORT = 5000; //서버 포트 정의
 
 // 정적 파일 불러오기
@@ -62,6 +63,18 @@ app.get("/Add_Event", (req, res) => {
   //점주 이벤트 추가 페이지
 
   res.sendFile(__dirname + "/MAin/Add_Event.html");
+});
+
+app.get("/OwnerSales", (req, res) => {
+  //점주 이벤트 추가 페이지
+
+  res.sendFile(__dirname + "/MAin/OwnerSales.html");
+});
+
+app.get("/Monthly_sales", (req, res) => {
+  //점주 이벤트 추가 페이지
+
+  res.sendFile(__dirname + "/MAin/Monthly_sales.html");
 });
 
 // 서버 실행
